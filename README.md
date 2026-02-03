@@ -49,4 +49,4 @@ All question data is stored in `public/questions.json`. This version provides a 
 
 ## 📜 License
 
-Created by Jordan. All rights reserved.
+This project is licensed under the MIT License.
