@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# CISM Mastery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, interactive platform designed for professionals preparing for the ISACA Certified Information Security Manager (CISM) certification. This application features over 1,000 uniquely rephrased questions to provide fresh practice scenarios while ensuring complete conceptual alignment with the official CISM domains.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **1,000+ Rephrased Questions**: Every question has been meticulously reworded to reduce copyright exposure while maintaining 100% technical accuracy.
+- **Official Domain Mapping**: Questions are organized cross-referenced against the four CISM domains:
+    - Domain 1: Information Security Governance
+    - Domain 2: Information Risk Management
+    - Domain 3: Information Security Program Development and Management
+    - Domain 4: Information Security Incident Management
+- **Intelligent Practice Modes**:
+    - **Training Mode**: Immediate feedback and comprehensive rationales for every answer choice.
+    - **Quiz Mode**: Simulates a standard test environment without immediate feedback.
+    - **Exam Mode**: A high-stakes 150-question simulation with a 4-hour timer and weighted scaled scoring (200-800).
+- **Advanced Analytics**: Track your "seen" percentage and "depth" (times completed) for each specific domain.
+- **Premium UI/UX**: Built with React, Tailwind CSS, and Framer Motion for a fluid, dark-mode prioritized, modern experience.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19 + TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Build Tool**: Vite
 
-## Expanding the ESLint configuration
+## 📦 Installation & Local Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/JJsilvera1/CISM-Mastery.git
+   cd CISM-Mastery
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔒 Content Integrity
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+All question data is stored in `public/questions.json`. This version uses a rephrased dataset to ensure unique phrasing and reduced similarity to original copyrighted materials, making it ideal for open distribution and study.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📜 License
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Created by Jordan. All rights reserved.
